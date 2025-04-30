@@ -9,9 +9,9 @@ export class SnackBarService {
 
   openSnackBar(msg: string) {
     this.snackBar.open(msg, 'close', {
-      verticalPosition : 'top',
-      horizontalPosition :'center',
-      duration : 2500
+      verticalPosition: 'top',
+      horizontalPosition: 'center',
+      duration: 2500,
     });
   }
 }

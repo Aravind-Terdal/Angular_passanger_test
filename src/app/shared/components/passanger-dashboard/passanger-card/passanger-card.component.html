@@ -1,33 +1,36 @@
 <mat-card>
-    <mat-card-title class="mt-2">
-       <div class="form-group fullname">
-        <input type="text" 
+  <mat-card-title class="mt-2">
+    <div class="form-group fullname">
+      <input
+        type="text"
         #fn
         [disabled]="!isInEditMode"
         [value]="passObj.fullname"
-        class="form-control">
-       </div>
-    </mat-card-title>
-    
-    <mat-card-content>
-        <p>
-            checkin Date : {{passObj.checkInDate ? (passObj.checkInDate | date) : "No Passanger Checked In"}}
-        </p>
-        <p>
-            children : {{passObj.children ? passObj.children.length : 0}}
-        </p>
-    </mat-card-content>
-    <mat-divider inset ></mat-divider>
-    <mat-card-actions>
-        <button mat-raised-button 
-        (click)="onPassNameUpdate(fn.value)"
-        color="primary">
-        {{isInEditMode ? 'Done': 'Edit'}}
-        </button>
-        <button mat-raised-button 
-        (click)="onRemove()"
-        color="warn">
-            Remove
-        </button>
-    </mat-card-actions>
+        class="form-control"
+      />
+    </div>
+  </mat-card-title>
+
+  <mat-card-content>
+    <p>
+      checkin Date :
+      {{
+        passObj.checkInDate
+          ? (passObj.checkInDate | date)
+          : "No Passanger Checked In"
+      }}
+    </p>
+    <p>children : {{ passObj.children ? passObj.children.length : 0 }}</p>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      (click)="onPassNameUpdate(fn.value)"
+      color="primary"
+    >
+      {{ isInEditMode ? "Done" : "Edit" }}
+    </button>
+    <button mat-raised-button (click)="onRemove()" color="warn">Remove</button>
+  </mat-card-actions>
 </mat-card>
