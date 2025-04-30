@@ -1,0 +1,9 @@
+.form-control:disabled, .form-control[readonly] {
+    background-color: transparent;
+    opacity: 1;
+    border-color: transparent;
+    font-weight: 700;
+}
+.fullname{
+    font-weight: 400;
+}

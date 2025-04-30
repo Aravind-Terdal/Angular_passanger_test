@@ -1,0 +1,16 @@
+<h2 class="text-center">Airline Passanger</h2>
+
+<app-passanger-count
+  [totalPassCount]="passangerArray.length"
+></app-passanger-count>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let pass of passangerArray">
+    {{ pass.fullname }}
+  </li>
+</ul>
+
+<app-passanger-card
+  [passObj]="pass"
+  *ngFor="let pass of passangerArray"
+></app-passanger-card>
