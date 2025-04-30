@@ -31,6 +31,6 @@ export class PassangerCardComponent implements OnInit {
 
   onRemove(){
     this._passangerService.removePass(this.passObj.id);
-    this.openSnackBAr.openSnackBar(`Passanger Removed ${this.passObj.fullname} succesfully`)
+    this.openSnackBAr.openSnackBar(`Passanger ${this.passObj.fullname} Removed Successfully`)
   }
 }
